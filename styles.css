@@ -160,6 +160,7 @@ html {
   font-weight: 700;
   text-transform: uppercase;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list a:hover,
@@ -214,6 +215,8 @@ html {
   text-decoration: none;
   padding-top: 10px;
   margin-top: 25px;
+  transition: background-color, border, color, font-weight,
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .banner-button:hover {
@@ -347,11 +350,11 @@ html {
 }
 
 .main-block {
-  height: 320px;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+  width: 255px;
 }
 
 .image-new-collection {
@@ -369,14 +372,19 @@ html {
   width: 235px;
   height: 260px;
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-block:hover .overlay-new-collection {
-  opacity: 0.549;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.main-block:hover .overlay-list {
+  opacity: 1;
   transform: translateY(0);
 }
 
@@ -384,24 +392,33 @@ html {
   width: 235px;
   height: 260px;
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(100%);
-  transition: transform 250ms;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .block-items:hover .overlay {
-  opacity: 0.5;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block-items:hover .overlay-list {
+  opacity: 1;
   transform: translateY(0);
 }
 
 .overlay-list {
   padding: 0;
+  opacity: 0;
   width: 235px;
   height: 260px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .overlay-items {
@@ -443,7 +460,7 @@ html {
 
 .heart {
   background-image: url(images/heart.png);
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .arrows {
@@ -454,7 +471,7 @@ html {
 
 .clock {
   background-image: url(images/clock.png);
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .basket {
@@ -510,6 +527,7 @@ html {
   height: 40px;
   align-items: center;
   display: flex;
+  transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .price {
@@ -526,6 +544,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .block-items {
@@ -619,6 +638,8 @@ html {
   text-decoration: none;
   justify-content: center;
   align-items: center;
+  transform: background-color, border, color,
+    font-weight 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover {
