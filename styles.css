@@ -332,6 +332,7 @@ html {
 /*New collection*/
 
 .new-collection {
+  padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--featured-products-background);
 }
