@@ -34,7 +34,6 @@ html {
   font-weight: 700;
   margin: 0;
   text-align: center;
-  padding-top: 100px;
   margin-bottom: 70px;
 }
 
@@ -55,6 +54,10 @@ html {
 }
 
 /*header*/
+
+.footer {
+  padding-top: 100px;
+}
 
 .top-header {
   height: 50px;
@@ -123,6 +126,11 @@ html {
 .fix {
   margin-right: 0;
   margin-left: 0;
+}
+
+.featured-prodacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .flex-container {
@@ -240,6 +248,7 @@ html {
 
 .about {
   padding-top: 95px;
+  padding-bottom: 80px;
 }
 
 .item {
@@ -277,7 +286,7 @@ html {
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.7;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .sun::before {
@@ -318,7 +327,6 @@ html {
   font-family: var(--font-family);
   font-weight: 300;
   text-align: center;
-  padding-bottom: 80px;
 }
 
 /*New collection*/
@@ -455,7 +463,6 @@ html {
   height: 48px;
   background-repeat: no-repeat;
   background-position: center;
-  transform: translateY(-10px);
 }
 
 .heart {
@@ -465,8 +472,11 @@ html {
 
 .arrows {
   background-image: url(images/arrows.png);
+  background-color: rgba(0, 0, 0, 0.4);
+  /*
   background-color: var(--transformation-color);
   border: 1px var(--transformation-color);
+  */
 }
 
 .clock {
@@ -484,6 +494,14 @@ html {
   color: var(--color-type);
   text-transform: uppercase;
   padding-left: 40px;
+}
+
+.overlay-button:hover {
+  background-color: var(--transformation-color);
+}
+
+.basket:hover {
+  background-color: var(--transformation-color);
 }
 
 /*Featured products section*/
@@ -579,10 +597,6 @@ html {
   background-color: var(--type-transformation);
 }
 
-.section-first {
-  padding-bottom: 105px;
-}
-
 /*Second section*/
 
 .thing-list-second {
@@ -660,6 +674,7 @@ html {
 }
 
 .latest-news {
+  padding-top: 100px;
   padding-bottom: 95px;
   background-color: var(--featured-products-background);
 }
