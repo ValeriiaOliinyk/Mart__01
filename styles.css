@@ -148,6 +148,23 @@ html {
 
 .logo {
   display: flex;
+  animation-name: media;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-delay: 2000ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes media {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .list {
@@ -197,6 +214,22 @@ html {
   font-family: var(--font-family);
   color: var(--color-type);
   font-weight: 300;
+  animation-name: banner-media;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+}
+
+@keyframes banner-media {
+  0% {
+    transform: rotate(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
 }
 
 .sales-title {
@@ -206,6 +239,23 @@ html {
   font-family: var(--font-family);
   color: var(--color-type);
   font-weight: 600;
+  animation-name: banner-media-title;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
+}
+
+@keyframes banner-media-title {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .banner-button {
@@ -225,6 +275,11 @@ html {
   margin-top: 25px;
   transition: background-color, border, color, font-weight,
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation-name: banner-media-title;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
 }
 
 .banner-button:hover {
@@ -457,6 +512,7 @@ html {
   height: 48px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .overlay-button-big {
@@ -466,6 +522,7 @@ html {
   height: 48px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .heart {
